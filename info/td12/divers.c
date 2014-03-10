@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
+/// compte le nombre de ligne dans un dictionnaire
 int nbligne(char *fic) { FILE* fp; int c=0; char flag=0;
   if ( (fp=fopen(fic,"rt"))==NULL) return 0;
   else
@@ -11,6 +12,7 @@ int nbligne(char *fic) { FILE* fp; int c=0; char flag=0;
   return c;
 }
 
+/// enleve tout les caractere invalide de mot
 int lecture(FILE* fp, char* mot) {
   char inter[512];
   int i,j;

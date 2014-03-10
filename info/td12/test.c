@@ -51,17 +51,15 @@ int test_hash()
 
     dim_hash = 256;
     printf ("DIM = %d\n", dim_hash);
-    number_error += is_valid_ul(s1,hash(s1, dim_hash),33);
+    number_error += is_valid_ul(s1,hash(s1, dim_hash),64);
     number_error += is_valid_ul(s2,hash(s2, dim_hash),0);
-    number_error += is_valid_ul(s3,hash(s3, dim_hash),3);
+    number_error += is_valid_ul(s3,hash(s3, dim_hash),66);
 
     return number_error;
 }
 
-#ifndef main
 int main(int argc, const char *argv[])
 {
     test();
     return 0;
 }
-#endif
